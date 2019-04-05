@@ -1,3 +1,3 @@
-*原始的spring项目引入jdbc
-**通过引入applicationContext.xml中的bean配置文件来引入bean
-**通过JAVA注解和component-scan方式可以减少很多配置操作
+# 原始的spring项目引入jdbc
+## 通过引入applicationContext.xml中的bean配置文件来引入bean
+## 通过JAVA注解和component-scan方式可以减少很多配置操作
