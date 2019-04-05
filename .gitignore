@@ -1,5 +1,4 @@
 .project
 .idea
-/target/
-SpringLearning.iml
-./*/*.iml
+target/
+springLearning.iml
