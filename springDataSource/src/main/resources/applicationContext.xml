@@ -4,11 +4,14 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.yueming.data" />
-<!--    <bean id="dataSource"  class="org.apache.commons.dbcp2.BasicDataSource">
+    <!--<context:component-scan base-package="com.yueming.data" />-->
+    <bean id="dataSource"  class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
         <property name="url" value="jdbc:mysql://127.0.0.1:3306/test"></property>
         <property name="username" value="root"></property>
         <property name="password" value="liufei302"></property>
-    </bean>-->
+    </bean>
+    <bean id="pureDataSourceDemo" class="com.yueming.data.PureDataSourceDemo">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
 </beans>

@@ -14,10 +14,18 @@ import java.util.Arrays;
 import java.util.Properties;
 
 
-@Configuration
+//@Configuration
 public class PureDataSourceDemo {
 
-    @Autowired
+    public DataSource getDataSource() {
+        return dataSource;
+    }
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    //@Autowired
     private DataSource dataSource;
     public static void main(String [] args) throws SQLException{
         System.out.println("hello world");
@@ -44,4 +52,5 @@ public class PureDataSourceDemo {
     private static void dataSourceDemo(ApplicationContext applicationContext ) throws SQLException{
         PureDataSourceDemo  demo = applicationContext.getBean("pureDataSourceDemo",PureDataSourceDemo.class);
     }
+
 }
