@@ -19,8 +19,32 @@
             <map>
                 <entry key="ds1" value-ref="dataSourceOne"></entry>
                 <entry key="ds2" value-ref="dataSourceTwo"></entry>
+                <entry key="ds3" value-ref="dataSourceDruid"></entry>
             </map>
         </property>
         <property name="defaultTargetDataSource" ref="dataSourceOne"></property>
+    </bean>
+
+    <bean id="dataSourceDruid" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/testdb?serverTimezone=UTC" />
+        <property name="username" value="root" />
+        <property name="password" value="liufei302" />
+
+        <property name="filters" value="stat" />
+
+        <property name="maxActive" value="20" />
+        <property name="initialSize" value="1" />
+        <property name="maxWait" value="60000" />
+        <property name="minIdle" value="1" />
+
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+
+        <property name="poolPreparedStatements" value="true" />
+        <property name="maxOpenPreparedStatements" value="20" />
     </bean>
 </beans>

@@ -22,6 +22,9 @@ public class MultDataSourceDemo {
         DataSourceSwitcher.setDataSourceKey( "ds2");
         System.out.println(dataSourceSwitcher.getConnection().toString());
 
+        DataSourceSwitcher.setDataSourceKey( "ds3");
+        System.out.println(dataSourceSwitcher.getConnection().toString());
+
     }
 
     public static void showBeans(ApplicationContext applicationContext){
