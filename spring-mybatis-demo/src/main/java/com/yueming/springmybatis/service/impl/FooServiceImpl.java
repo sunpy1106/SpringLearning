@@ -2,8 +2,9 @@ package com.yueming.springmybatis.service.impl;
 
 import com.yueming.springmybatis.DAO.UserMapper;
 import com.yueming.springmybatis.VO.User;
+import com.yueming.springmybatis.service.FooService;
 
-public class FooServiceImpl  {
+public class FooServiceImpl  implements FooService {
 
     private final UserMapper userMapper;
 
