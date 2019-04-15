@@ -11,6 +11,7 @@
     <modules>
         <module>springDataSource</module>
         <module>mult-data-source</module>
+        <module>puremybatis</module>
     </modules>
 
 
